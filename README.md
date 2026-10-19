@@ -30,6 +30,6 @@ The repository includes:
 
 ## 🎯 Purpose
 
-Build a record of projects and practical work and apply web development concepts beyond theory.
+Build a record of projects, practical work and apply web development concepts beyond theory.
 
 **Built while learning and developing with eMobilis.**
