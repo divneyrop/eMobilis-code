@@ -10,70 +10,90 @@ body {
 
 .navbar {
     height: 76px;
-    background: #ffffff;
+    background: white;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar-brand {
+    color: #5fcf80;
     font-size: 26px;
     font-weight: 700;
-    color: #5fcf80;
-    letter-spacing: 0.5px;
+    text-decoration: none;
 }
 
 .navbar-brand:hover {
     color: #5fcf80;
 }
 
-.navbar-nav {
+.nav {
+    display: flex;
+    align-items: center;
     gap: 4px;
 }
 
-.nav-link {
-    color: #222222;
+.nav-pills .nav-link {
+    color: #222;
+    background: transparent;
+    border-radius: 0;
+    padding: 10px 13px;
     font-size: 15px;
-    padding: 10px 13px !important;
 }
 
-.nav-link:hover {
+.nav-pills .nav-link:hover {
     color: #5fcf80;
+    background: transparent;
 }
 
-.nav-link.active {
-    color: #5fcf80 !important;
+.nav-pills .nav-link.active {
+    color: #5fcf80;
+    background: transparent;
+}
+
+.dropdown-menu {
+    background: white;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    padding: 8px 0;
+}
+
+.dropdown-item {
+    color: #222;
+    padding: 9px 20px;
+}
+
+.dropdown-item:hover {
+    color: #5fcf80;
+    background: #f5f5f5;
 }
 
 .get-started {
+    display: inline-block;
     background: #5fcf80;
-    color: #ffffff;
-    border-radius: 25px;
+    color: white;
+    text-decoration: none;
     padding: 10px 23px;
+    border-radius: 25px;
+    margin-left: 12px;
     font-size: 14px;
-    border: none;
 }
 
 .get-started:hover {
     background: #4fbd70;
-    color: #ffffff;
-}
-
-.dropdown-menu {
-    border: none;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.dropdown-item:hover {
-    background: #f5f5f5;
-    color: #5fcf80;
+    color: white;
 }
 
 .hero {
     height: 626px;
-    background-image: url("https://unsplash.com/photos/three-girls-are-sitting-on-a-bench-and-looking-at-a-laptop-U7c8rTBwc0c");
+    position: relative;
+    background-image: url("students_outside.avif");
     background-size: cover;
     background-position: center;
-    position: relative;
-    display: flex;
-    align-items: center;
 }
 
 .hero-overlay {
@@ -83,16 +103,19 @@ body {
 }
 
 .hero .container {
+    height: 100%;
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: center;
 }
 
 .hero-content {
-    max-width: 700px;
+    max-width: 750px;
 }
 
 .hero h1 {
-    color: #ffffff;
+    color: white;
     font-size: 43px;
     line-height: 1.15;
     font-weight: 700;
@@ -100,46 +123,41 @@ body {
 }
 
 .hero p {
-    color: #ffffff;
+    color: white;
     font-size: 22px;
     margin-bottom: 45px;
 }
 
 .hero-button {
     display: inline-block;
-    color: #ffffff;
-    border: 2px solid #ffffff;
+    color: white;
+    border: 2px solid white;
     border-radius: 30px;
     padding: 9px 30px;
     text-decoration: none;
     font-size: 14px;
-    transition: 0.3s;
 }
 
 .hero-button:hover {
-    background: #ffffff;
-    color: #333333;
+    background: white;
+    color: #222;
 }
 
 @media (max-width: 991px) {
 
     .navbar {
         height: auto;
-        min-height: 76px;
+        padding: 20px 0;
     }
 
-    .navbar-collapse {
-        background: #ffffff;
-        padding: 15px;
+    .navbar .container {
+        flex-direction: column;
     }
 
-    .navbar-nav {
-        gap: 0;
-    }
-
-    .get-started {
-        display: inline-block;
-        margin-top: 10px;
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
     }
 
     .hero {
