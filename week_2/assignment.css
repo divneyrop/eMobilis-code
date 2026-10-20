@@ -5,15 +5,17 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar {
     height: 76px;
-    background: white;
+    background: #ffffff;
+    padding: 0;
 }
 
 .navbar .container {
+    height: 76px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,6 +26,7 @@ body {
     font-size: 26px;
     font-weight: 700;
     text-decoration: none;
+    margin: 0;
 }
 
 .navbar-brand:hover {
@@ -33,15 +36,16 @@ body {
 .nav {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 3px;
 }
 
 .nav-pills .nav-link {
-    color: #222;
+    color: #222222;
     background: transparent;
     border-radius: 0;
+    font-size: 14px;
+    font-weight: 400;
     padding: 10px 13px;
-    font-size: 15px;
 }
 
 .nav-pills .nav-link:hover {
@@ -54,17 +58,25 @@ body {
     background: transparent;
 }
 
+.nav-link.dropdown-toggle::after {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
 .dropdown-menu {
-    background: white;
+    min-width: 180px;
+    margin-top: 10px;
+    padding: 8px 0;
+    background: #ffffff;
     border: 0;
     border-radius: 4px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
-    padding: 8px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
 }
 
 .dropdown-item {
-    color: #222;
-    padding: 9px 20px;
+    color: #222222;
+    font-size: 14px;
+    padding: 9px 18px;
 }
 
 .dropdown-item:hover {
@@ -72,20 +84,24 @@ body {
     background: #f5f5f5;
 }
 
+.dropdown-divider {
+    margin: 5px 0;
+}
+
 .get-started {
     display: inline-block;
+    color: #ffffff;
     background: #5fcf80;
-    color: white;
     text-decoration: none;
+    font-size: 13px;
     padding: 10px 23px;
+    margin-left: 13px;
     border-radius: 25px;
-    margin-left: 12px;
-    font-size: 14px;
 }
 
 .get-started:hover {
-    background: #4fbd70;
-    color: white;
+    color: #ffffff;
+    background: #52c474;
 }
 
 .hero {
@@ -98,66 +114,74 @@ body {
 
 .hero-overlay {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.48);
 }
 
-.hero .container {
+.hero-container {
     height: 100%;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     align-items: center;
 }
 
 .hero-content {
-    max-width: 750px;
+    width: 100%;
+    max-width: 900px;
+    margin-top: -5px;
 }
 
 .hero h1 {
-    color: white;
+    color: #ffffff;
     font-size: 43px;
     line-height: 1.15;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
 
 .hero p {
-    color: white;
-    font-size: 22px;
-    margin-bottom: 45px;
+    color: #ffffff;
+    font-size: 21px;
+    line-height: 1.5;
+    margin-bottom: 43px;
 }
 
 .hero-button {
     display: inline-block;
-    color: white;
-    border: 2px solid white;
+    color: #ffffff;
+    background: transparent;
+    border: 2px solid #ffffff;
     border-radius: 30px;
     padding: 9px 30px;
-    text-decoration: none;
     font-size: 14px;
+    text-decoration: none;
 }
 
 .hero-button:hover {
-    background: white;
-    color: #222;
+    color: #222222;
+    background: #ffffff;
 }
 
 @media (max-width: 991px) {
 
     .navbar {
         height: auto;
-        padding: 20px 0;
+        padding: 15px 0;
     }
 
     .navbar .container {
+        height: auto;
         flex-direction: column;
     }
 
     .nav {
+        margin-top: 10px;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 15px;
     }
 
     .hero {
@@ -165,10 +189,31 @@ body {
     }
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 38px;
     }
 
     .hero p {
         font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .nav-pills .nav-link {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .get-started {
+        margin-left: 5px;
+        padding: 8px 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 17px;
     }
 }
