@@ -9,22 +9,24 @@ body {
 }
 
 .navbar {
-    height: 76px;
-    background: #ffffff;
+    min-height: 76px;
+    background: #ffffff !important;
     padding: 0;
+    position: relative;
+    z-index: 1000;
 }
 
-.navbar .container {
+.navbar .container-fluid {
     width: 100%;
     max-width: 1320px;
-    height: 76px;
+    min-height: 76px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .navbar-brand {
-    color: #5fcf80;
+    color: #5fcf80 !important;
     font-size: 26px;
     font-weight: 700;
     text-decoration: none;
@@ -33,48 +35,38 @@ body {
 }
 
 .navbar-brand:hover {
-    color: #5fcf80;
+    color: #5fcf80 !important;
 }
 
-.navbar .nav {
+.navbar .navbar-nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex-wrap: nowrap;
     gap: 8px;
-    margin: 0 0 0 auto;
+    margin-left: auto;
     padding: 0;
     background-color: #ffffff;
 }
 
 .navbar .nav-item {
     list-style: none;
-    position: relative;
 }
 
-.nav-pills .nav-link {
+.navbar .nav-link {
     color: #222222;
     background-color: transparent !important;
-    border-radius: 0;
     font-size: 14px;
     font-weight: 400;
     padding: 10px 10px;
     white-space: nowrap;
 }
 
-.nav-pills .nav-link:hover {
+.navbar .nav-link:hover {
     color: #5fcf80;
-    background-color: #ffffff !important;
 }
 
-.nav-pills .nav-link.active {
+.navbar .nav-link.active {
     color: #5fcf80;
-    background-color: #ffffff !important;
-}
-
-.nav-link.dropdown-toggle::after {
-    margin-left: 6px;
-    vertical-align: middle;
 }
 
 .navbar .dropdown-menu {
@@ -95,21 +87,33 @@ body {
 
 .navbar .dropdown-item:hover {
     color: #5fcf80;
-    background-color: #f5f5f5;
+    background-color: #566359;
 }
 
-.nav-pills .nav-link.get-started {
+.navbar .nav-link.get-started {
     display: inline-block;
-    color: #ffffff;
+    color: #ffffff !important;
     background-color: #5fcf80 !important;
     border-radius: 25px;
     padding: 10px 23px;
     margin-left: 8px;
 }
 
-.nav-pills .nav-link.get-started:hover {
-    color: #ffffff;
+.navbar .nav-link.get-started:hover {
+    color: #ffffff !important;
     background-color: #52c474 !important;
+}
+
+.navbar .navbar-toggler {
+    border: none;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-collapse {
+    background-color: #ffffff;
 }
 
 .hero {
@@ -171,26 +175,97 @@ body {
 
 .hero-button:hover {
     color: #222222;
-    background: #ffffff;
+    background: #566359;
+}
+
+@media (max-width: 991.98px) {
+
+    .navbar {
+        min-height: 76px;
+    }
+
+    .navbar .container-fluid {
+        min-height: 76px;
+    }
+
+    .navbar-collapse {
+        padding: 15px 0;
+        background-color: #ffffff;
+        position: relative;
+        z-index: 1001;
+    }
+
+    .navbar .navbar-nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        margin-left: 0;
+    }
+
+    .navbar .nav-item {
+        width: 100%;
+    }
+
+    .navbar .nav-link {
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    .navbar .dropdown-menu {
+        width: 100%;
+        position: static;
+        box-shadow: none;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .navbar .nav-link.get-started {
+        width: auto;
+        margin: 10px 15px;
+        padding: 10px 23px;
+    }
+
+    .hero {
+        height: 600px;
+    }
+
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 19px;
+    }
 }
 
 @media (max-width: 576px) {
 
-    .nav-pills .nav-link {
-        padding: 8px;
-        font-size: 13px;
+    .navbar-brand {
+        font-size: 23px;
     }
 
-    .get-started {
-        margin-left: 5px;
-        padding: 8px 15px;
+    .hero {
+        height: 550px;
     }
 
     .hero h1 {
         font-size: 32px;
+        line-height: 1.2;
     }
 
     .hero p {
         font-size: 17px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .hero-button {
+        padding: 9px 25px;
     }
 }
