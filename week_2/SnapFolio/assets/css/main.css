@@ -19,12 +19,13 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #1f1f1f; /* Background color for the entire website, including individual sections */
+  --background-color: #102722; /* Background color for the entire website, including individual sections */
+  --header-background-color: #0b1812fc; /* Background color for the header section, including the navigation menu */
   --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ececec; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #232323; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #310606; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --accent-color: #8fb2a1; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #0b1812fc; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #000000; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -160,7 +161,7 @@ h6 {
 .header .header-container {
   border-radius: 20px;
   padding: 15px;
-  background-color: var(--background-color);
+  background-color: var(--header-background-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
